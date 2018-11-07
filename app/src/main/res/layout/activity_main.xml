@@ -14,33 +14,38 @@
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintLeft_toLeftOf="parent"
       app:layout_constraintRight_toRightOf="parent"
-      app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.766"
+      app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.731"
   />
   <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                  tools:layout_editor_absoluteY="30dp"
+                  android:id="@+id/relative_layout"
                   tools:ignore="MissingConstraints">
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
                   android:layout_centerHorizontal="true"
+                  android:layout_marginTop="30dp"
                   android:id="@+id/layout1" android:orientation="horizontal" android:gravity="center">
       <ImageButton
           android:layout_width="130dp"
           android:layout_height="130dp"
-          android:id="@+id/button1"/>
+          android:layout_margin="5dp"
+          android:id="@+id/button1" android:src="@drawable/sample_2"/>
       <ImageButton
           android:layout_width="130dp"
           android:layout_height="130dp"
-          android:id="@+id/button2"/>
+          android:layout_margin="5dp"
+          android:id="@+id/button2" android:src="@drawable/sample_3"/>
     </LinearLayout>
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
                   android:layout_below="@+id/layout1" android:orientation="horizontal" android:gravity="center">
       <ImageButton
           android:layout_width="130dp"
           android:layout_height="130dp"
-          android:id="@+id/button3"/>
+          android:layout_margin="5dp"
+          android:id="@+id/button3" android:src="@drawable/sample_4"/>
       <ImageButton
           android:layout_width="130dp"
           android:layout_height="130dp"
-          android:id="@+id/button4"/>
+          android:layout_margin="5dp"
+          android:id="@+id/button4" android:src="@drawable/sample_5"/>
     </LinearLayout>
 
   </RelativeLayout>
