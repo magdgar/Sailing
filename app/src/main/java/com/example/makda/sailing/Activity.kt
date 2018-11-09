@@ -8,7 +8,11 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
-        Toast.makeText(this, "Button clicked!", Toast.LENGTH_SHORT).show()
+        val buttonId = v!!.resources.getResourceName(v.id).split("/")[1]
+        when (buttonId) {
+            "button1" -> Toast.makeText(this, "Button clicked!", Toast.LENGTH_SHORT).show()
+            else -> Toast.makeText(this, "Button clicked! $buttonId", Toast.LENGTH_SHORT).show()
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,6 +23,5 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         button2.setOnClickListener(this)
         button3.setOnClickListener(this)
         button4.setOnClickListener(this)
-
     }
 }
