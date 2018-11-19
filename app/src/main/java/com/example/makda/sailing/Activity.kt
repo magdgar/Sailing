@@ -7,12 +7,16 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
+    val res = listOf("button1", "button3", "button1", "button1", "button2", "button4")
+    var times = 0
     override fun onClick(v: View?) {
         val buttonId = v!!.resources.getResourceName(v.id).split("/")[1]
+
         when (buttonId) {
-            "button1" -> Toast.makeText(this, "Button clicked!", Toast.LENGTH_SHORT).show()
+            res[times.rem(res.size)] -> Toast.makeText(this, "Won!!!", Toast.LENGTH_SHORT).show()
             else -> Toast.makeText(this, "Button clicked! $buttonId", Toast.LENGTH_SHORT).show()
         }
+        times++
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
