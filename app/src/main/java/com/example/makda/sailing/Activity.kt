@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private val questionsList = parse("/res/raw/q.json") as JsonArray<JsonObject>
     var questionNumber = 0
     var times = 0
+
     override fun onClick(v: View?) {
         val buttonId = v!!.resources.getResourceName(v.id).split("/button")[1]
 
@@ -31,8 +32,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         questionNumber = Random().nextInt(questionsList.size)
         textView.text =  questionsList[questionNumber]["question"].toString()
 
+        button1.setImageResource(R.drawable.sample_2)
         button1.setOnClickListener(this)
         button2.setOnClickListener(this)
+        button2.setImageResource(R.drawable.sample_2)
         button3.setOnClickListener(this)
         button4.setOnClickListener(this)
     }
