@@ -6,10 +6,12 @@
   },
   {
     "question": "Whats your name?",
-    "answer": 2
+    "answer": 2,
+    "images": []
   },
   {
     "question": "Yet another question?",
-    "answer": 1
+    "answer": 1,
+    "images": []
   }
 ]
