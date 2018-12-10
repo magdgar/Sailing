@@ -1,6 +1,5 @@
 package com.example.makda.sailing
 
-import android.graphics.drawable.Drawable
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -12,17 +11,16 @@ import java.io.ByteArrayOutputStream
 import java.util.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
-    val res = listOf("button1", "button3", "button1", "button1", "button2", "button4")
-    val reso = readResource("/res/raw/q.json")
-    private val questionsList = reso?.let { Klaxon().parseArray<Question>(it) }
-    var questionNumber = 0
+    val res = readResource("/res/raw/q.json")
+    private val questionsList = res?.let { Klaxon().parseArray<Question>(it) }
+    private var questionNumber = 0
 
     override fun onClick(v: View?) {
         val buttonId = v!!.resources.getResourceName(v.id).split("/button")[1]
 
         when (buttonId.toInt() - 1) {
             questionsList?.get(questionNumber)?.answer -> Toast.makeText(this, "Won!!!", Toast.LENGTH_SHORT).show()
-            else -> Toast.makeText(this, "Button clicked! $buttonId", Toast.LENGTH_SHORT).show()
+            else -> Toast.makeText(this, "Missed this time :( $buttonId", Toast.LENGTH_SHORT).show()
         }
         loadNextQuestion()
     }
@@ -35,7 +33,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun loadNextQuestion() {
         questionNumber = Random().nextInt(questionsList?.size!!)
-        val question =  questionsList?.get(questionNumber)
+        val question = questionsList[questionNumber]
         setButtonImages(question)
         setButtonsOnClickListeners()
         textView.text = question.question
