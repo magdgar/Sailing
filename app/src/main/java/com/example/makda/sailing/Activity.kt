@@ -1,6 +1,6 @@
 package com.example.makda.sailing
 
-import android.support.v7.app.AppCompatActivity
+import android.app.Activity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import java.io.ByteArrayOutputStream
 import java.util.*
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+class MainActivity : Activity(), View.OnClickListener {
     val res = readResource("/res/raw/q.json")
     private val questionsList = res?.let { Klaxon().parseArray<Question>(it) }
     private var questionNumber = 0
