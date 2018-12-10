@@ -2,16 +2,16 @@
   {
     "question": "There is the questions?",
     "answer": 1,
-    "images": ["IMG_TWO", "IMG_TWO", "IMG_TWO", "IMG_TWO"]
+    "images": ["IMG_TWO", "IMG_THREE", "IMG_FOUR", "IMG_FIVE"]
   },
   {
     "question": "Whats your name?",
     "answer": 2,
-    "images":  ["IMG_TWO", "IMG_TWO", "IMG_TWO", "IMG_TWO"]
+    "images":  ["IMG_THREE", "IMG_TWO", "IMG_TWO", "IMG_FIVE"]
   },
   {
     "question": "Yet another question?",
     "answer": 1,
-    "images":  ["IMG_TWO", "IMG_TWO", "IMG_TWO", "IMG_TWO"]
+    "images":  ["IMG_TWO", "IMG_FIVE", "IMG_TWO", "IMG_THREE"]
   }
 ]

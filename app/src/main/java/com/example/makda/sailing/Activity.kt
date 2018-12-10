@@ -28,15 +28,23 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setButtonsOnClickListeners()
         loadNextQuestion()
     }
 
     private fun loadNextQuestion() {
-        questionNumber = Random().nextInt(questionsList?.size!!)
-        val question = questionsList[questionNumber]
+        val question = getNextQuestion()
         setButtonImages(question)
-        setButtonsOnClickListeners()
         textView.text = question.question
+    }
+
+    private fun getNextQuestion() :Question {
+        var nextQuestionNumber = Random().nextInt(questionsList?.size!!)
+        while(questionsList.size > 1 && nextQuestionNumber == questionNumber ) {
+            nextQuestionNumber = Random().nextInt(questionsList.size)
+        }
+        questionNumber = nextQuestionNumber
+        return questionsList[questionNumber]
     }
 
     private fun readResource(name: String) : String? {
