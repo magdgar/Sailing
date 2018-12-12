@@ -12,6 +12,7 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="Some question?"
+      android:textSize="22.0sp"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintLeft_toLeftOf="parent"
       app:layout_constraintRight_toRightOf="parent"
@@ -25,15 +26,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
+        android:textSize="30.0sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.731"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="45dp"
+        app:layout_constraintTop_toTopOf="parent"
     />
 
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
                   android:layout_centerHorizontal="true"
-                  android:layout_marginTop="30dp"
+                  android:layout_marginTop="80dp"
                   android:id="@+id/layout1" android:orientation="horizontal" android:gravity="center">
       <ImageButton
           android:layout_width="130dp"
