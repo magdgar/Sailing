@@ -19,8 +19,8 @@ class MainActivity : Activity(), View.OnClickListener {
         val buttonId = v!!.resources.getResourceName(v.id).split("/button")[1]
 
         when (buttonId.toInt() - 1) {
-            questionsList?.get(questionNumber)?.answer -> Toast.makeText(this, "Won!!!", Toast.LENGTH_SHORT).show()
-            else -> Toast.makeText(this, "Missed this time :( $buttonId", Toast.LENGTH_SHORT).show()
+            questionsList?.get(questionNumber)?.answer -> rightAnswerChosen()
+            else -> Toast.makeText(this, "Missed this time :(", Toast.LENGTH_SHORT).show()
         }
         loadNextQuestion()
     }
@@ -30,6 +30,11 @@ class MainActivity : Activity(), View.OnClickListener {
         setContentView(R.layout.activity_main)
         setButtonsOnClickListeners()
         loadNextQuestion()
+    }
+
+    private fun rightAnswerChosen() {
+        Toast.makeText(this, "Good!!!", Toast.LENGTH_SHORT).show()
+        counter.text = (counter.text.toString().toInt() + 1 ).toString()
     }
 
     private fun loadNextQuestion() {
