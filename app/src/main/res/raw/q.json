@@ -13,5 +13,10 @@
     "question": "Yet another question?",
     "answer": 1,
     "images":  ["IMG_TWO", "IMG_FIVE", "IMG_TWO", "IMG_THREE"]
+  },
+  {
+    "question": "Zakaz nawracania",
+    "answer": 1,
+    "images":  ["PRONATION_BAN", "PASS_BAN", "ANCHOR_BAN", "BERTH_BAN"]
   }
 ]
