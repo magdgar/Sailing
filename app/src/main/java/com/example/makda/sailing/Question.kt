@@ -1,6 +1,7 @@
 package com.example.makda.sailing
 
 data class Question(val question: String, val answer: Int, val images: List<String>)
+data class StandardQuestion(val question: String, val answer: Int, val options: List<String>)
 
 enum class IMAGES (val id: Int){
     IMG_TWO(R.drawable.sample_2),
