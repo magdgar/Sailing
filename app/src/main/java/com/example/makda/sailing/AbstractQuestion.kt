@@ -1,11 +1,11 @@
 package com.example.makda.sailing
 
 import android.app.Activity
-import android.os.Bundle
 import android.widget.Toast
 import com.beust.klaxon.Klaxon
 import com.beust.klaxon.Parser
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.standard_question_activity.*
 import java.io.ByteArrayOutputStream
 import java.util.*
 
